@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Header/Blog Title */
+.header {
+    background: rgb(0, 164, 239);
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header p{
+    font-size: 20px;    
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    padding-left: 20px;
+    float: left;
+    width: 25%;
+}
+
+.fakeimg{
+    padding: 20px;
+    background-color: rgb(115,115,115);
+    width: 100%;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: rgb(127,186,0);
+    padding: 20px;
+    margin-top: 20px;
+}
+.card.right {
+    background-color: rgb(255,185,0);
+    
+}
+/* Clear floats after the columns */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(242,80,34);
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 
+800px wide, make the two columns stack on top of each other 
+instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn{
+        width: 100%;
+        padding: 0;
+    }
+}
